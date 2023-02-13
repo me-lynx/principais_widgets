@@ -1,16 +1,18 @@
-# principais_widgets
+# Principais Widgets no Flutter
 
-A new Flutter project.
+#### Agora que já conhecemos os Widgets e já entendemos como ele funciona dentro da nossa aplicação, chegou a hora de entender quais são os principais Widgets e como eles podem ser utilizados no Flutter.
 
-## Getting Started
+#### Na [documentação oficial](https://docs.flutter.dev/development/ui/widgets) é possivel visualizar todos os Widgets padrões do Flutter e até testá-los. 
 
-This project is a starting point for a Flutter application.
+###### MaterialApp
+###### CuppertinoApp
+###### Container
+###### Scaffold
+###### Menu Drawer 
+###### Buttons
+###### Text
+###### Navigator
+###### AppBar
+###### Icons
+###### FontAwesomeIcons - Conhecendo packages de terceiros. 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
