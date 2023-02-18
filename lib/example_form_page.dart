@@ -4,34 +4,36 @@ class MyFormPage extends StatefulWidget {
   const MyFormPage({super.key});
 
   @override
-  _MyFormPageState createState() {
-    return _MyFormPageState();
-  }
+  State<MyFormPage> createState() => _MyFormPageState();
 }
 
 class _MyFormPageState extends State<MyFormPage> {
-  String _name = '';
+  String _name = "";
   bool _isStudent = false;
   int _selectedGender = 0;
   double _currentSliderValue = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Form'),
+        leading: GestureDetector(
+          child: const Icon(Icons.arrow_back_ios),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(35),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Name',
               style: TextStyle(fontSize: 18.0),
             ),
             TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Enter your name',
               ),
               onChanged: (value) {
@@ -40,9 +42,9 @@ class _MyFormPageState extends State<MyFormPage> {
                 });
               },
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             CheckboxListTile(
-              title: Text('I am a student'),
+              title: const Text('I am a student'),
               value: _isStudent,
               onChanged: (value) {
                 setState(() {
@@ -50,13 +52,13 @@ class _MyFormPageState extends State<MyFormPage> {
                 });
               },
             ),
-            SizedBox(height: 16.0),
-            Text(
+            const SizedBox(height: 16.0),
+            const Text(
               'Gender',
               style: TextStyle(fontSize: 18.0),
             ),
             RadioListTile(
-              title: Text('Male'),
+              title: const Text('Male'),
               value: 0,
               groupValue: _selectedGender,
               onChanged: (value) {
@@ -66,7 +68,7 @@ class _MyFormPageState extends State<MyFormPage> {
               },
             ),
             RadioListTile(
-              title: Text('Female'),
+              title: const Text('Female'),
               value: 1,
               groupValue: _selectedGender,
               onChanged: (value) {
@@ -75,8 +77,8 @@ class _MyFormPageState extends State<MyFormPage> {
                 });
               },
             ),
-            SizedBox(height: 16.0),
-            Text(
+            const SizedBox(height: 16.0),
+            const Text(
               'Age',
               style: TextStyle(fontSize: 18.0),
             ),

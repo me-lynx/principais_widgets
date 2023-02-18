@@ -28,29 +28,34 @@ class _Page3State extends State<Page3> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Animated Container and Custom Paint'),
+          leading: GestureDetector(
+            child: const Icon(Icons.arrow_back_ios),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AnimatedContainer(
-                duration: Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 500),
                 curve: Curves.easeIn,
                 height: _size,
                 width: _size,
                 color: _color,
-                child: Text(
-                  'Animated Container',
+                child: const Text(
+                  'Container animado',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               GestureDetector(
                 onTap: _onButtonPressed,
                 child: CustomPaint(
                   painter: MyPainter(_isRotated),
-                  child: Container(
+                  child: const SizedBox(
                     height: 200,
                     width: 200,
                     child: Center(

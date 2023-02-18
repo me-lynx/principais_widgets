@@ -19,14 +19,12 @@ class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My App'),
-      ),
+      appBar: AppBar(),
       body: Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
-            Text(
+            const Text(
               'Products',
               style: TextStyle(
                 fontSize: 24,
@@ -44,7 +42,7 @@ class _Page2State extends State<Page2> {
                 ),
               ),
             ),
-            Text(
+            const Text(
               'Grid of Products',
               style: TextStyle(
                 fontSize: 24,
@@ -64,15 +62,15 @@ class _Page2State extends State<Page2> {
                       children: [
                         Text(
                           product['title'],
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
                           '\$${product['price']}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                           ),
                         ),

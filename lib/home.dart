@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: const Text('Conhecendo os widgets'),
       ),
       body: Center(
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
                   width: 50,
@@ -77,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Page2()),
+                    MaterialPageRoute(builder: (context) => const Page2()),
                   );
                 },
                 child: const Text('Clique aqui 2')),
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Page3()),
+                    MaterialPageRoute(builder: (context) => const Page3()),
                   );
                 },
                 child: const Text('Clique aqui 3')),
@@ -123,7 +124,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyFormPage()),
+                    MaterialPageRoute(builder: (context) => const MyFormPage()),
                   );
                 },
                 child: const Text('Clique aqui'))
@@ -142,9 +143,6 @@ class _HomePageState extends State<HomePage> {
 // Image: um widget que exibe uma imagem na tela.
 // Column: um widget que organiza outros widgets em uma coluna vertical.
 // Center: um widget que centraliza outro widget horizontal e verticalmente.
-// RaisedButton: um widget que exibe um botão que pode ser pressionado pelo usuário.
-// Observe que este é apenas um exemplo básico de como utilizar alguns dos principais widgets do Flutter. Existem muitos outros widgets disponíveis que podem ser combinados de maneiras diferentes para criar interfaces de usuário complexas e interessantes.
-
 
 
 
